@@ -1,4 +1,3 @@
-//upgradek
 let point = document.querySelector(".counter")
 let cost1 = document.querySelector(".cost1")
 let level1 = document.querySelector(".level1")
@@ -8,24 +7,39 @@ let image = document.querySelector(".clicker")
 let cost2 = document.querySelector(".cost2")
 let cost3 = document.querySelector(".cost3")
 let cost5 = document.querySelector(".cost5")
+let costwin = document.querySelector(".costwin")
 let rageInfo = document.querySelector(".rageInfo")
+let upgradeOne = document.querySelector(".upgrade1")
+let upgradeTwo = document.querySelector(".upgrade2")
+let upgradeThree = document.querySelector(".upgrade3")
+let upgradeFour = document.querySelector(".upgrade4")
+let upgradeFive = document.querySelector(".upgrade5")
+let shop1 = document.querySelector(".shop1")
+let shop2 = document.querySelector(".shop2")
+let shop3 = document.querySelector(".shop3")
+let shop4 = document.querySelector(".shop4")
+let shop5 = document.querySelector(".shop5")
 let autoInterval = null
 let multiplier = 1
 let automultiplier1 = 0
 let automultiplier2 = 0
 let level_1 = 1
 let time = 0
-let rageUnlocked = false
-//upgradek
+let won = false
 
-//hangok
+//BALÁZS SZÍNEI PLS ÁLLÍTSD BE
+const unlocked = "linear-gradient(45deg, #4b0082, #a855f7)"
+const black = "#ffd700"
+
+
 var sound1 = new Audio();
 var sound2 = new Audio();
 var sound3 = new Audio();
+sound1.src = "sounds/soundeffect.ogg";
+sound2.src = "sounds/bogos.wav";
 sound3.src = "sounds/error.mp3";
-//hangok
 
-// rage modex
+let rageUnlocked = false
 let rageActive = false
 let rageCooldown = false
 let rageTimeLeft = 0
@@ -33,6 +47,23 @@ let rageCooldownLeft = 0
 let rageInterval = null
 let rageCooldownInterval = null
 let rageMultiplier = 3
+
+
+let paellaowned = false
+let bullowned = false
+let flamowned = false
+let mikulaowned = false
+let churrosowned = false
+let costpaella = document.querySelector(".costpaella")
+let costbull = document.querySelector(".costbull")
+let costflam = document.querySelector(".costflam")
+let costmikula = document.querySelector(".costmikula")
+let costchurros = document.querySelector(".costchurros")
+
+let level_2 = 1
+let chance = document.querySelector(".chance")
+let cost4 = document.querySelector(".cost4")
+let critchance = 0
 
 function rage() {
     if (rageUnlocked){
@@ -89,10 +120,6 @@ function rageCDTime() {
 
 
 
-//rage mode
-
-
-
 
 function displayPoints(){
     let value = parseFloat(point.innerHTML) + multiplier
@@ -140,6 +167,8 @@ function upgrade1() {
         level_1 = 5
         level1.innerHTML = "MAX"
         point.innerHTML = Math.round(point.innerHTML * 100) / 100
+        upgradeOne.style.background = unlocked
+        upgradeOne.style.color = black
     }
     else {
         sound3.play()
@@ -153,8 +182,9 @@ function upgrade2() {
         automultiplier1 = 15
         cost2.innerHTML = "- UNLOCKED"
         autoInterval = setInterval(autoclick1, 1000)
-        sound1.src = "sounds/soundeffect.ogg";
         point.innerHTML = Math.round(point.innerHTML * 100) / 100
+        upgradeTwo.style.background = unlocked
+        upgradeTwo.style.color = black
     }
     else {
         sound3.play()
@@ -173,8 +203,9 @@ function upgrade3() {
         automultiplier2 = 250
         cost3.innerHTML = "- UNLOCKED"
         autoInterval = setInterval(autoclick2, 5000)
-        sound2.src = "sounds/bogos.wav";
         point.innerHTML = Math.round(point.innerHTML * 100) / 100
+        upgradeThree.style.background = unlocked
+        upgradeThree.style.color = black
     }
     else {
         sound3.play()
@@ -187,10 +218,7 @@ function autoclick2() {
     sound2.play()
 }
 
-let level_2 = 1
-let chance = document.querySelector(".chance")
-let cost4 = document.querySelector(".cost4")
-let critchance = 0
+
 
 function upgrade4() {
     if (parseFloat(point.innerHTML) >=150 && level_2 === 1) {
@@ -228,6 +256,8 @@ function upgrade4() {
         level_2 = 5
         level2.innerHTML = "MAX"
         point.innerHTML = Math.round(point.innerHTML * 100) / 100
+        upgradeFour.style.background = unlocked
+        upgradeFour.style.color = black
     }
     else {
         sound3.play()
@@ -256,6 +286,8 @@ function upgrade5() {
         rageInfo.innerHTML = "READY"
         cost5.innerHTML = "- UNLOCKED"
         point.innerHTML = Math.round(point.innerHTML * 100) / 100
+        upgradeFive.style.background = unlocked
+        upgradeFive.style.color = black
     }
     else {
         sound3.play()
@@ -263,17 +295,6 @@ function upgrade5() {
 }
 
 
-
-let paellaowned = false
-let bullowned = false
-let flamowned = false
-let mikulaowned = false
-let churrosowned = false
-let costpaella = document.querySelector(".costpaella")
-let costbull = document.querySelector(".costbull")
-let costflam = document.querySelector(".costflam")
-let costmikula = document.querySelector(".costmikula")
-let costchurros = document.querySelector(".costchurros")
 
 
 
@@ -286,6 +307,9 @@ function shop(skin) {
             costpaella.innerHTML = "OWNED"
             paellaowned = true
             point.innerHTML = Math.round(point.innerHTML * 100) / 100
+            shop1.style.background = unlocked
+            shop1.style.color = black
+
         }
         else if (paellaowned) {
          image.src = "img/paella.png";
@@ -302,6 +326,9 @@ function shop(skin) {
             costbull.innerHTML = "OWNED"
             bullowned = true
             point.innerHTML = Math.round(point.innerHTML * 100) / 100
+            shop2.style.background = unlocked
+            shop2.style.color = black
+
         }
         else if (bullowned) {
          image.src = "img/bull.png";
@@ -318,6 +345,9 @@ function shop(skin) {
             costflam.innerHTML = "OWNED"
             flamowned = true
             point.innerHTML = Math.round(point.innerHTML * 100) / 100
+            shop3.style.background = unlocked
+            shop3.style.color = black
+
         }
         else if (flamowned) {
          image.src = "img/flamenco.png";
@@ -334,6 +364,9 @@ function shop(skin) {
             costmikula.innerHTML = "OWNED"
             mikulaowned = true
             point.innerHTML = Math.round(point.innerHTML * 100) / 100
+            shop4.style.background = unlocked
+            shop4.style.color = black
+
         }
         else if (mikulaowned) {
          image.src = "img/tapas.png";
@@ -349,6 +382,8 @@ function shop(skin) {
             costchurros.innerHTML = "OWNED"
             churrosowned = true
             point.innerHTML = Math.round(point.innerHTML * 100) / 100
+            shop5.style.background = unlocked
+            shop5.style.color = black
         }
         else if (churrosowned) {
          image.src = "img/churros.png";
@@ -357,4 +392,15 @@ function shop(skin) {
         sound3.play()
     }
     }  
+}
+
+
+
+function win() {
+    if (parseFloat(point.innerHTML) >=1000 && !won) {
+        image.src = "img/goldmedal.png"
+        won = true
+        costwin.innerHTML = "UNLOCKED"
+        
+    }
 }
