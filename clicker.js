@@ -35,9 +35,11 @@ const black = "#ffd700"
 var sound1 = new Audio();
 var sound2 = new Audio();
 var sound3 = new Audio();
+var sound4 = new Audio();
 sound1.src = "sounds/soundeffect.ogg";
 sound2.src = "sounds/bogos.wav";
 sound3.src = "sounds/error.mp3";
+sound4.src = "sounds/upgrade.mp3";
 
 let rageUnlocked = false
 let rageActive = false
@@ -140,6 +142,7 @@ function upgrade1() {
         level_1 = 2
         point.innerHTML= parseFloat(point.innerHTML) -6.7
         point.innerHTML = Math.round(point.innerHTML * 100) / 100
+        sound4.play()
     }
     else if (parseFloat(point.innerHTML) >=20.0 && level_1 === 2) {
         point.innerHTML= parseFloat(point.innerHTML) -20.0
@@ -149,6 +152,7 @@ function upgrade1() {
         level_1 = 3
         level1.innerHTML = "3"
         point.innerHTML = Math.round(point.innerHTML * 100) / 100
+        sound4.play()
     }
     else if (parseFloat(point.innerHTML) >=75.0 && level_1 === 3) {
         point.innerHTML= parseFloat(point.innerHTML) -75.0
@@ -158,6 +162,7 @@ function upgrade1() {
         level_1 = 4
         level1.innerHTML = "4"
         point.innerHTML = Math.round(point.innerHTML * 100) / 100
+        sound4.play()
     }
     else if (parseFloat(point.innerHTML) >=200.0 && level_1 === 4) {
         point.innerHTML= parseFloat(point.innerHTML) -200.0
@@ -169,6 +174,7 @@ function upgrade1() {
         point.innerHTML = Math.round(point.innerHTML * 100) / 100
         upgradeOne.style.background = unlocked
         upgradeOne.style.color = black
+        sound4.play()
     }
     else {
         sound3.play()
@@ -185,6 +191,7 @@ function upgrade2() {
         point.innerHTML = Math.round(point.innerHTML * 100) / 100
         upgradeTwo.style.background = unlocked
         upgradeTwo.style.color = black
+        sound4.play()
     }
     else {
         sound3.play()
@@ -206,6 +213,7 @@ function upgrade3() {
         point.innerHTML = Math.round(point.innerHTML * 100) / 100
         upgradeThree.style.background = unlocked
         upgradeThree.style.color = black
+        sound4.play()
     }
     else {
         sound3.play()
@@ -229,6 +237,7 @@ function upgrade4() {
         level_2 = 2
         point.innerHTML= parseFloat(point.innerHTML) -150
         point.innerHTML = Math.round(point.innerHTML * 100) / 100
+        sound4.play()
     }
     else if (parseFloat(point.innerHTML) >=230 && level_2 === 2) {
         point.innerHTML= parseFloat(point.innerHTML) -230
@@ -238,6 +247,7 @@ function upgrade4() {
         level_2 = 3
         level2.innerHTML = "3"
         point.innerHTML = Math.round(point.innerHTML * 100) / 100
+        sound4.play()
     }
     else if (parseFloat(point.innerHTML) >=300 && level_2 === 3) {
         point.innerHTML= parseFloat(point.innerHTML) -300
@@ -247,6 +257,7 @@ function upgrade4() {
         level_2 = 4
         level2.innerHTML = "4"
         point.innerHTML = Math.round(point.innerHTML * 100) / 100
+        sound4.play()
     }
     else if (parseFloat(point.innerHTML) >=1000 && level_2 === 4) {
         point.innerHTML= parseFloat(point.innerHTML) -1000
@@ -258,6 +269,7 @@ function upgrade4() {
         point.innerHTML = Math.round(point.innerHTML * 100) / 100
         upgradeFour.style.background = unlocked
         upgradeFour.style.color = black
+        sound4.play()
     }
     else {
         sound3.play()
@@ -288,6 +300,7 @@ function upgrade5() {
         point.innerHTML = Math.round(point.innerHTML * 100) / 100
         upgradeFive.style.background = unlocked
         upgradeFive.style.color = black
+        sound4.play()
     }
     else {
         sound3.play()
