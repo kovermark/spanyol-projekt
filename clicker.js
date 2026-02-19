@@ -27,9 +27,8 @@ let level_1 = 1
 let time = 0
 let won = false
 
-//BALÁZS SZÍNEI PLS ÁLLÍTSD BE
 const unlocked = "linear-gradient(45deg, #4b0082, #a855f7)"
-const black = "#ffd700"
+const fontColor = "#ffd700"
 
 
 var sound1 = new Audio();
@@ -173,7 +172,7 @@ function upgrade1() {
         level1.innerHTML = "MAX"
         point.innerHTML = Math.round(point.innerHTML * 100) / 100
         upgradeOne.style.background = unlocked
-        upgradeOne.style.color = black
+        upgradeOne.style.color = fontColor
         sound4.play()
     }
     else {
@@ -190,7 +189,7 @@ function upgrade2() {
         autoInterval = setInterval(autoclick1, 1000)
         point.innerHTML = Math.round(point.innerHTML * 100) / 100
         upgradeTwo.style.background = unlocked
-        upgradeTwo.style.color = black
+        upgradeTwo.style.color = fontColor
         sound4.play()
     }
     else {
@@ -212,7 +211,7 @@ function upgrade3() {
         autoInterval = setInterval(autoclick2, 5000)
         point.innerHTML = Math.round(point.innerHTML * 100) / 100
         upgradeThree.style.background = unlocked
-        upgradeThree.style.color = black
+        upgradeThree.style.color = fontColor
         sound4.play()
     }
     else {
@@ -268,7 +267,7 @@ function upgrade4() {
         level2.innerHTML = "MAX"
         point.innerHTML = Math.round(point.innerHTML * 100) / 100
         upgradeFour.style.background = unlocked
-        upgradeFour.style.color = black
+        upgradeFour.style.color = fontColor
         sound4.play()
     }
     else {
@@ -299,7 +298,7 @@ function upgrade5() {
         cost5.innerHTML = "- UNLOCKED"
         point.innerHTML = Math.round(point.innerHTML * 100) / 100
         upgradeFive.style.background = unlocked
-        upgradeFive.style.color = black
+        upgradeFive.style.color = fontColor
         sound4.play()
     }
     else {
@@ -321,7 +320,7 @@ function shop(skin) {
             paellaowned = true
             point.innerHTML = Math.round(point.innerHTML * 100) / 100
             shop1.style.background = unlocked
-            shop1.style.color = black
+            shop1.style.color = fontColor
 
         }
         else if (paellaowned) {
@@ -340,7 +339,7 @@ function shop(skin) {
             bullowned = true
             point.innerHTML = Math.round(point.innerHTML * 100) / 100
             shop2.style.background = unlocked
-            shop2.style.color = black
+            shop2.style.color = fontColor
 
         }
         else if (bullowned) {
@@ -359,7 +358,7 @@ function shop(skin) {
             flamowned = true
             point.innerHTML = Math.round(point.innerHTML * 100) / 100
             shop3.style.background = unlocked
-            shop3.style.color = black
+            shop3.style.color = fontColor
 
         }
         else if (flamowned) {
@@ -378,7 +377,7 @@ function shop(skin) {
             mikulaowned = true
             point.innerHTML = Math.round(point.innerHTML * 100) / 100
             shop4.style.background = unlocked
-            shop4.style.color = black
+            shop4.style.color = fontColor
 
         }
         else if (mikulaowned) {
@@ -396,7 +395,7 @@ function shop(skin) {
             churrosowned = true
             point.innerHTML = Math.round(point.innerHTML * 100) / 100
             shop5.style.background = unlocked
-            shop5.style.color = black
+            shop5.style.color = fontColor
         }
         else if (churrosowned) {
          image.src = "img/churros.png";
