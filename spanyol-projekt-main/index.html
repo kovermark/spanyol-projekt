@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>11.B Spanyol Játék</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="index.css" rel="stylesheet">
+    <link rel='stylesheet' type='text/css' media='screen' href='clicker.css'>
+    
+    
+</head>
+<body>
+
+
+<nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand" href="#">Spanyolország</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navMenu">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link gomb" href="#">Kezdőlap</a></li>
+                <li class="nav-item"><a class="nav-link gomb" href="#about">Az országról</a></li>
+                <li class="nav-item"><a class="nav-link gomb" href="#play">Játék</a></li>
+                <li class="nav-item"><a class="nav-link gomb" href="#contact">Tudtad?</a></li>
+                <button class="nav-link gomb" onclick="toggleTheme()">Háttér</button>
+                
+
+
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+
+<div id="carouselExample" 
+     class="carousel slide"
+     data-bs-interval="3000">
+  <div class="carousel-inner">
+    <div class="carousel-item active carousel-image">
+      <img src="img/carousel1.jpg" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h2 class="carousel-label">First slide label</h2>
+      </div>
+    </div>
+    <div class="carousel-item carousel-image">
+      <img src="img/carousel2.jpg" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h2 class="carousel-label">Second slide label</h2>
+      </div>
+    </div>
+    <div class="carousel-item carousel-image">
+      <img src="img/carousel3.jpg" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h2 class="carousel-label">Third slide label</h2>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+<section class="py-5" id="about">
+    <div class="container">
+        <h2 class="text-center mb-4">Látnivalók</h2>
+        <div class="row g-4">
+
+            <div class="col-md-4">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body text-center">
+                        <img class="card-img-top" src="img/prado.jpg" alt="Card image cap">
+                        <h5 class="card-title ">Madrid - Prado Múzeum</h5>
+                        <p class="card-text">A Prado Európa egyik legfontosabb művészeti gyűjteményét őrzi. Velázquez, Goya és El Greco művei miatt a művészetkedvelők számára kihagyhatatlan.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body text-center">
+                        <img class="card-img-top" src="img/plaza.jpg" alt="Card image cap">
+                        <h5 class="card-title ">Sevilla - Plaza de España</h5>
+                        <p class="card-text">Ez a félköríves, monumentális tér a város egyik leglátványosabb pontja. A csatorna, a hidak és a kerámiadíszítések miatt különösen fotogén hely.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body text-center">
+                        <img class="card-img-top" src="img/sagra.jpg" alt="Card image cap">
+                        <h5 class="card-title">Barcelona - Sagrada Família</h5>
+                        <p class="card-text">Gaudí ikonikus bazilikája még ma sincs teljesen kész, de így is lenyűgöző látvány. A belső tereket a fény játéka és a különleges formák teszik igazán egyedivé.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="py-5">
+    <div class="container">
+        <h2 class="text-center mb-4">Spanyol Gasztronómia</h2>
+        <div class="row g-4">
+
+            <div class="col-md-4">
+                <div class="card h-100 shadow-sm">
+                    <img src="img/paella.jpg" class="card-img-top" alt="Paella">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Paella</h5>
+                        <p class="card-text">A híres valenciai rizses étel, amely tenger gyümölcseivel vagy hússal készül.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card h-100 shadow-sm">
+                    <img src="img/tapas.jpg" class="card-img-top" alt="Tapas">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Tapas</h5>
+                        <p class="card-text">Kis adag ételek, amelyeket barátokkal megosztva fogyasztanak — a spanyol életérzés része.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card h-100 shadow-sm">
+                    <img src="img/churros.jpg" class="card-img-top" alt="Churros">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Churros</h5>
+                        <p class="card-text">Édes, ropogós tészta csokoládéöntettel — népszerű reggeli finomság.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="game-body" id="play">
+<div class="game-main">
+        <div class="shop">
+        <h2>COSMETICS</h2>
+            <div class="shop1" id = "upgrade"onclick="shop('paella')">
+                <p>Paella skin</p>
+                <p>Cost: <span class="costpaella">500</span></p>
+            </div>
+            <div class="shop2" id = "upgrade"onclick="shop('bull')">
+                <p>Bull skin</p>
+                <p>Cost: <span class="costbull">750</span></p>
+            </div>
+            <div class="shop3" id = "upgrade" onclick="shop('flam')">
+                <p>Flamenco skin</p>
+                <p>Cost: <span class="costflam">1000</span></p>
+            </div>
+            <div class="shop4" id = "upgrade"  onclick="shop('mikula')">
+                <p>Tapas skin</p>
+                <p>Cost: <span class="costmikula">1500</span></p>
+            </div>
+            <div class="shop5" id = "upgrade"  onclick="shop('churros')">
+                <p>Churros skin</p>
+                <p>Cost: <span class="costchurros">2000</span></p>
+            </div>
+        </div>
+
+
+
+        <div class="upgrades">
+            <h2>UPGRADES</h2>
+            <div class="upgrade1" id = "upgrade" onclick="upgrade1()">
+                <p>Points multiplier: <span class="multiplier">1x</span></p>
+                <p>Cost: <span class="cost1">67</span> Level: <span class="level1">1</span> </p>
+            </div>
+            <div class="upgrade4" id = "upgrade"  onclick="upgrade4()">
+                <p>Crit chance: <span class="chance">0%</span></p>
+                <p>Cost: <span class="cost4">15000</span> Level: <span class="level2">1</span></p>
+            </div>
+            <div class="upgrade2" id = "upgrade"  onclick="upgrade2()">
+                <p>Auto clicker: <span class="multiplier">15/s</span></p>
+                <p>Cost: <span class="cost2">10000</span></p>
+            </div>
+            <div class="upgrade3" id = "upgrade"  onclick="upgrade3()">
+                <p>Auto clicker II: <span class="multiplier">50/s</span></p>
+                <p>Cost: <span class="cost3">20000</span></p>
+            </div>
+            <div class="upgrade5" id = "upgrade"  onclick="upgrade5()">
+                <p>Rage upgrade</p>
+                <p>Cost: <span class="cost5">7500</span></p>
+            </div>
+        </div>
+        <div class="clickerbox">
+            <h3>Points: <br> <span class="counter">0</span> </h3>
+            <img draggable="false" id = "clicker" class="clicker" src="img/naranja2.png" alt="" srcset=""  onclick="displayPoints()">
+            <div id = "rage" onclick="rage()">
+                <h3 class="rage-h3">RAGE</h3>
+                <p class="rageInfo">Not unlocked yet! </p>
+            </div>
+        </div>
+    
+    </div>
+    
+</section>
+<section class="bg-light py-5">
+    <div class="container">
+        <h2 class="text-center mb-4">Tudtad?</h2>
+        <ul class="list-group list-group-flush" id="factsList">
+            </ul>
+    </div>
+</section>
+
+<footer class="bg-dark text-white text-center py-3" id="contact">
+    <p class="mb-0">© 2026 Spanyol Játék Oldal <br>About | Privacy | Terms</p>
+</footer>
+<script src='clicker.js'></script>
+<script src='index.js'></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
