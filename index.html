@@ -27,7 +27,7 @@
                 <li class="nav-item"><a class="nav-link gomb" href="#about">Az országról</a></li>
                 <li class="nav-item"><a class="nav-link gomb" href="#play">Játék</a></li>
                 <li class="nav-item"><a class="nav-link gomb" href="#contact">Tudtad?</a></li>
-                <li class="nav-item"><button class="nav-link gomb" onclick="toggleTheme()">Háttér</button></li>
+                <button class="nav-link gomb" onclick="toggleTheme()">Háttér</button>
                 
 
 
@@ -38,7 +38,9 @@
 
 
 
-<div id="carouselExample" class="carousel slide">
+<div id="carouselExample" 
+     class="carousel slide"
+     data-bs-interval="3000">
   <div class="carousel-inner">
     <div class="carousel-item active carousel-image">
       <img src="img/carousel1.jpg" class="d-block w-100" alt="...">
@@ -213,11 +215,8 @@
 <section class="bg-light py-5">
     <div class="container">
         <h2 class="text-center mb-4">Tudtad?</h2>
-        <ul class="list-group list-group-flush">
-            <li class="list-group-item fact1"></li>
-            <li class="list-group-item fact2"></li>
-            <li class="list-group-item fact3"></li>
-        </ul>
+        <ul class="list-group list-group-flush" id="factsList">
+            </ul>
     </div>
 </section>
 

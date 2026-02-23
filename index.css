@@ -67,6 +67,7 @@ body.dark-mode .navbar {
     color: white;
     transition: all 0.3s ease;
     cursor: pointer;
+    text-align: left;
 }
 
 
@@ -170,7 +171,9 @@ li:hover {
 }
 
 body.dark-mode li {
-    background-color: #6e6c6c !important;
+    background-color: #4f4f4f !important;
+    border-style: none;
+    color: white;
 }
 
 /* ===== FOOTER ===== */
@@ -297,4 +300,9 @@ body.dark-mode #upgrade {
 #rage:hover {
     transform: scale(1.1);
     box-shadow: 0 0 20px red;
+}
+
+
+.carousel-item {
+  transition: transform 5.5s ease-in-out !important;
 }
