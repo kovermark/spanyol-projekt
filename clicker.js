@@ -19,6 +19,8 @@ let shop2 = document.querySelector(".shop2")
 let shop3 = document.querySelector(".shop3")
 let shop4 = document.querySelector(".shop4")
 let shop5 = document.querySelector(".shop5")
+let winfirst = document.querySelector(".winfirst")
+let winsecond = document.querySelector(".winsecond")
 let autoInterval = null
 let multiplier = 1
 let automultiplier1 = 0
@@ -35,10 +37,14 @@ var sound1 = new Audio();
 var sound2 = new Audio();
 var sound3 = new Audio();
 var sound4 = new Audio();
+var sound5 = new Audio();
+var sound6 = new Audio();
 sound1.src = "sounds/soundeffect.ogg";
 sound2.src = "sounds/bogos.wav";
 sound3.src = "sounds/error.mp3";
 sound4.src = "sounds/upgrade.mp3";
+sound5.src = "sounds/rage.wav"
+sound6.src = "sounds/win.mp3"
 
 let rageUnlocked = false
 let rageActive = false
@@ -69,13 +75,14 @@ let critchance = 0
 function rage() {
     if (rageUnlocked){
         if (rageActive || rageCooldown) {
-                return
+            sound3.play()
+            return
         }
     
         rageActive = true
         rageCooldown = true
         rageTimeLeft = 15
-
+        sound5.play()
         rageInterval = setInterval(rageActivated, 1000)
     }
     else {
@@ -94,7 +101,7 @@ function rageActivated() {
         rageCDStart()
     }
     else {
-        rageInfo.innerHTML = "Time left: " + rageTimeLeft
+        rageInfo.innerHTML = "Hátralévő idő: " + rageTimeLeft
     }
 }
 
@@ -109,12 +116,12 @@ function rageCDTime() {
     rageCooldownLeft--
 
     if (rageCooldownLeft <= 0) {
-        rageInfo.innerHTML = "READY"
+        rageInfo.innerHTML = "KÉSZ"
         clearInterval(rageCooldownInterval)
         rageCooldown = false
     }
     else {
-        rageInfo.innerHTML = "Cooldown: " + rageCooldownLeft
+        rageInfo.innerHTML = "Újratöltés: " + rageCooldownLeft
     }
 }
 
@@ -185,7 +192,7 @@ function upgrade2() {
     if (parseFloat(point.innerHTML) >= 100 && level_1 === 5 && automultiplier1 === 0) {
         point.innerHTML= parseFloat(point.innerHTML)- 100
         automultiplier1 = 15
-        cost2.innerHTML = "- UNLOCKED"
+        cost2.innerHTML = "- FELOLDVA"
         autoInterval = setInterval(autoclick1, 1000)
         point.innerHTML = Math.round(point.innerHTML * 100) / 100
         upgradeTwo.style.background = unlocked
@@ -207,7 +214,7 @@ function upgrade3() {
     if (parseFloat(point.innerHTML) >= 200 && level_1 === 5 && automultiplier2 === 0) {
         point.innerHTML= parseFloat(point.innerHTML)- 100
         automultiplier2 = 250
-        cost3.innerHTML = "- UNLOCKED"
+        cost3.innerHTML = "- FELOLDVA"
         autoInterval = setInterval(autoclick2, 5000)
         point.innerHTML = Math.round(point.innerHTML * 100) / 100
         upgradeThree.style.background = unlocked
@@ -294,8 +301,8 @@ function upgrade5() {
     if (!rageUnlocked && parseFloat(point.innerHTML) >= 750){
         point.innerHTML= parseFloat(point.innerHTML) -750
         rageUnlocked = true
-        rageInfo.innerHTML = "READY"
-        cost5.innerHTML = "- UNLOCKED"
+        rageInfo.innerHTML = "KÉSZ"
+        cost5.innerHTML = "- FELOLDVA"
         point.innerHTML = Math.round(point.innerHTML * 100) / 100
         upgradeFive.style.background = unlocked
         upgradeFive.style.color = fontColor
@@ -316,7 +323,7 @@ function shop(skin) {
         if (!paellaowned &&parseFloat(point.innerHTML) >= 500) {
             point.innerHTML= parseFloat(point.innerHTML)- 500
             image.src = "img/paella.png";
-            costpaella.innerHTML = "OWNED"
+            costpaella.innerHTML = "FELOLDVA"
             paellaowned = true
             point.innerHTML = Math.round(point.innerHTML * 100) / 100
             shop1.style.background = unlocked
@@ -336,7 +343,7 @@ function shop(skin) {
         if (!bullowned &&parseFloat(point.innerHTML) >= 750) {
             point.innerHTML= parseFloat(point.innerHTML)- 750
             image.src = "img/bull.png";
-            costbull.innerHTML = "OWNED"
+            costbull.innerHTML = "FELOLDVA"
             bullowned = true
             point.innerHTML = Math.round(point.innerHTML * 100) / 100
             shop2.style.background = unlocked
@@ -356,7 +363,7 @@ function shop(skin) {
         if (!flamowned &&parseFloat(point.innerHTML) >= 1000) {
             point.innerHTML= parseFloat(point.innerHTML)- 1000
             image.src = "img/flamenco.png";
-            costflam.innerHTML = "OWNED"
+            costflam.innerHTML = "FELOLDVA"
             flamowned = true
             point.innerHTML = Math.round(point.innerHTML * 100) / 100
             shop3.style.background = unlocked
@@ -375,7 +382,7 @@ function shop(skin) {
         if (!mikulaowned &&parseFloat(point.innerHTML) >= 1000) {
             point.innerHTML= parseFloat(point.innerHTML)- 1000
             image.src = "img/tapas.png";
-            costmikula.innerHTML = "OWNED"
+            costmikula.innerHTML = "FELOLDVA"
             mikulaowned = true
             point.innerHTML = Math.round(point.innerHTML * 100) / 100
             shop4.style.background = unlocked
@@ -394,7 +401,7 @@ function shop(skin) {
         if (!churrosowned &&parseFloat(point.innerHTML) >= 1000) {
             point.innerHTML= parseFloat(point.innerHTML)- 1000
             image.src = "img/churros.png";
-            costchurros.innerHTML = "OWNED"
+            costchurros.innerHTML = "FELOLDVA"
             churrosowned = true
             point.innerHTML = Math.round(point.innerHTML * 100) / 100
             shop5.style.background = unlocked
@@ -416,7 +423,11 @@ function win() {
     if (parseFloat(point.innerHTML) >=1000 && !won) {
         image.src = "img/goldmedal.png"
         won = true
-        costwin.innerHTML = "UNLOCKED"
-        
+        sound6.play()
+        winfirst.innerHTML = "MEGNYERTED A JÁTÉKOT!"
+        winsecond.innerHTML = "GRATULÁLUNK!"
+    }
+    else {
+        sound3.play()
     }
 }

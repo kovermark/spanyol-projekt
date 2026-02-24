@@ -273,13 +273,13 @@ body.dark-mode #upgrade {
 .column-left {
     float: left;
     width: 40%;
-    height: 6.9vh;
+    /* height: 6.9vh; */
 }
 
 .column-right {
     float: left;
     width: 60%;
-    height: 5vh;
+    /* height: 5vh; */
 }
 
 .row:after {
