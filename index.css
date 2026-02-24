@@ -1,4 +1,4 @@
-/* ===== ALAP ===== */
+/* ===== BASE ===== */
 
 body {
     background: #eee3ca;
@@ -31,18 +31,9 @@ body.dark-mode {
     color: #ffffff !important;
 }
 
-body.dark-mode .navbar {
-    background: rgba(68, 68, 68, 0.95) !important;
-    backdrop-filter: blur(8px);
-    box-shadow: 0 5px 20px rgba(0,0,0,0.3);
-    transition: 0.3s;
-}
-
-
 .nav-link {
     font-family: 'Poppins', sans-serif;
     font-size: 16px;
-    
     color: #ffffff !important;
 }
 
@@ -51,9 +42,15 @@ body.dark-mode .navbar {
     transition: 0.3s;
 }
 
+#navMenu li:hover {
+    background-color: #856334 !important;
+}
 
+body.dark-mode .navbar {
+    background: rgba(68, 68, 68, 0.95) !important;
+}
 
-/* ===== GOMBOK ===== */
+/* ===== BUTTONS ===== */
 
 .gomb {
     border: none;
@@ -67,76 +64,41 @@ body.dark-mode .navbar {
     color: white;
     transition: all 0.3s ease;
     cursor: pointer;
-    text-align: left;
 }
-
 
 body.dark-mode .gomb {
-    border: none;
-    margin: 3px 5px;
-    border-radius: 5px;
     background: #646464;
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 16px;
-    letter-spacing: 1px;
-    padding: 8px 18px;
-    color: white;
-    transition: all 0.3s ease;
-    cursor: pointer;
 }
-
-
-
-
 
 .gomb:hover {
     transform: scale(1.1);
     box-shadow: 0 5px 15px rgba(0,0,0,0.4);
 }
 
+/* ===== HEADINGS ===== */
 
-
-
-/* ===== CÍMEK ===== */
-
-h1 {
+h1, h2, h3 {
     font-family: 'Bebas Neue', sans-serif;
-    font-size: 48px;
-    letter-spacing: 2px;
 }
 
-h2 {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 36px;
-    letter-spacing: 1.5px;
-}
+h1 { font-size: 48px; }
+h2 { font-size: 36px; }
+h3 { font-size: 24px; }
 
-h3 {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 24px;
-    letter-spacing: 1px;
-}
-
-/* ===== KÁRTYÁK ===== */
-
-.card-title {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 22px;
-    letter-spacing: 1px;
-    margin-top: 5px;
-}
-
-.card-text {
-    font-size: 16px;
-}
+/* ===== CARDS ===== */
 
 .card {
-    background-color: #ad987a;
-    border: none;
+    background-color: #faf5ee;
+    border: 1px solid #e0d6c6;
     border-radius: 20px;
     transition: all 0.4s ease;
     box-shadow: 0 10px 25px rgba(0,0,0,0.1);
 }
+
+.card h5 {
+    padding-top: 1vh;
+}
+
 
 .card:hover {
     transform: translateY(-10px);
@@ -149,7 +111,13 @@ body.dark-mode .card {
     box-shadow: 0 10px 25px rgba(0,0,0,0.6);
 }
 
-/* ===== SZEKCIÓK ===== */
+.card-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 22px;
+    letter-spacing: 1px;
+}
+
+/* ===== SECTIONS ===== */
 
 .bg-light {
     background-color: #f0e7d8 !important;
@@ -159,7 +127,7 @@ body.dark-mode .bg-light {
     background-color: #181818 !important;
 }
 
-/* ===== LISTÁK ===== */
+/* ===== LIST ITEMS ===== */
 
 li {
     background-color: #ebddc3 !important;
@@ -172,7 +140,6 @@ li:hover {
 
 body.dark-mode li {
     background-color: #4f4f4f !important;
-    border-style: none;
     color: white;
 }
 
@@ -193,6 +160,7 @@ footer {
 }
 
 .carousel-caption {
+    font-size: 2rem;
     top: 50%;
     transform: translateY(-50%);
     bottom: auto;
@@ -200,21 +168,19 @@ footer {
 
 .carousel-label {
     font-family: 'Bebas Neue', sans-serif;
-    font-size: 48px;
+    font-size: 5rem;
     letter-spacing: 2px;
     text-shadow: 4px 4px 20px rgba(0,0,0,0.8);
     animation: fadeInUp 1.5s ease;
 }
 
 @keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(40px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.carousel-item {
+    transition: transform 1.5s ease-in-out !important;
 }
 
 /* ===== CLICKER ===== */
@@ -228,8 +194,6 @@ footer {
     transition: 0.15s;
     cursor: pointer;
 }
-
-
 
 .clicker:active {
     transform: scale(0.9);
@@ -257,7 +221,7 @@ body.dark-mode .upgrades {
     background: rgba(59, 59, 59, 0.8);
 }
 
-/* ===== UPGRADE DOBOZ ===== */
+/* ===== UPGRADE BOX ===== */
 
 #upgrade {
     background: linear-gradient(45deg, #745925, #c89b3c);
@@ -276,13 +240,11 @@ body.dark-mode .upgrades {
 }
 
 body.dark-mode #upgrade {
-    background: #313131;
+    background: linear-gradient(45deg, #3b3b3b, #4d4d4d);
     color: white;
 }
 
-
-
-/* ===== RAGE ===== */
+/* ===== RAGE BUTTON ===== */
 
 #rage {
     background: linear-gradient(45deg, darkred, crimson);
@@ -302,7 +264,26 @@ body.dark-mode #upgrade {
     box-shadow: 0 0 20px red;
 }
 
+/* ===== CLICKER SHOP LAYOUT (from old CSS) ===== */
 
-.carousel-item {
-  transition: transform 5.5s ease-in-out !important;
+.upgrade-image {
+    max-height: 7vh;
+}
+
+.column-left {
+    float: left;
+    width: 40%;
+    height: 6.9vh;
+}
+
+.column-right {
+    float: left;
+    width: 60%;
+    height: 5vh;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
 }

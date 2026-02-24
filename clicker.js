@@ -321,6 +321,7 @@ function shop(skin) {
             point.innerHTML = Math.round(point.innerHTML * 100) / 100
             shop1.style.background = unlocked
             shop1.style.color = fontColor
+            sound4.play()
 
         }
         else if (paellaowned) {
@@ -340,6 +341,7 @@ function shop(skin) {
             point.innerHTML = Math.round(point.innerHTML * 100) / 100
             shop2.style.background = unlocked
             shop2.style.color = fontColor
+            sound4.play()
 
         }
         else if (bullowned) {
@@ -359,7 +361,7 @@ function shop(skin) {
             point.innerHTML = Math.round(point.innerHTML * 100) / 100
             shop3.style.background = unlocked
             shop3.style.color = fontColor
-
+            sound4.play()
         }
         else if (flamowned) {
          image.src = "img/flamenco.png";
@@ -378,6 +380,7 @@ function shop(skin) {
             point.innerHTML = Math.round(point.innerHTML * 100) / 100
             shop4.style.background = unlocked
             shop4.style.color = fontColor
+            sound4.play()
 
         }
         else if (mikulaowned) {
@@ -396,6 +399,7 @@ function shop(skin) {
             point.innerHTML = Math.round(point.innerHTML * 100) / 100
             shop5.style.background = unlocked
             shop5.style.color = fontColor
+            sound4.play()
         }
         else if (churrosowned) {
          image.src = "img/churros.png";
