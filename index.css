@@ -267,7 +267,9 @@ body.dark-mode #upgrade {
 /* ===== CLICKER SHOP LAYOUT (from old CSS) ===== */
 
 .upgrade-image {
-    max-height: 7vh;
+    /* max-height: 7vh;
+    max-width: 7vh; */
+    width: 65px;
 }
 
 .column-left {
