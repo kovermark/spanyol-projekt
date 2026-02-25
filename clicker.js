@@ -28,6 +28,7 @@ let automultiplier2 = 0
 let level_1 = 1
 let time = 0
 let won = false
+let muted = false
 
 const unlocked = "linear-gradient(45deg, #4b0082, #a855f7)"
 const fontColor = "#ffd700"
@@ -315,6 +316,29 @@ function upgrade5() {
 
 
 
+function mute() {
+    if (!muted) {
+        sound1.src = null
+        sound2.src = null
+        sound3.src = null
+        sound4.src = null
+        sound5.src = null
+        sound6.src = null
+        muted = true
+    }
+    else {
+        sound1.src = "sounds/soundeffect.ogg"
+        sound2.src = "sounds/bogos.wav"
+        sound3.src = "sounds/error.mp3"
+        sound4.src = "sounds/upgrade.mp3"
+        sound5.src = "sounds/rage.wav"
+        sound6.src = "sounds/win.mp3"
+        muted = false
+    }
+}
+
+
+
 
 
 
@@ -426,6 +450,8 @@ function win() {
         sound6.play()
         winfirst.innerHTML = "MEGNYERTED A JÁTÉKOT!"
         winsecond.innerHTML = "GRATULÁLUNK!"
+        clearInterval(autoInterval)
+        autoInterval = null
     }
     else {
         sound3.play()
