@@ -149,7 +149,9 @@ function upgrade1() {
         level_1 = 2
         point.innerHTML= parseFloat(point.innerHTML) -6.7
         point.innerHTML = Math.round(point.innerHTML * 100) / 100
-        sound4.play()
+        if (!muted){
+            sound4.play()
+        }
     }
     else if (parseFloat(point.innerHTML) >=20.0 && level_1 === 2) {
         point.innerHTML= parseFloat(point.innerHTML) -20.0
@@ -159,7 +161,9 @@ function upgrade1() {
         level_1 = 3
         level1.innerHTML = "3"
         point.innerHTML = Math.round(point.innerHTML * 100) / 100
-        sound4.play()
+        if (!muted){
+            sound4.play()
+        }
     }
     else if (parseFloat(point.innerHTML) >=75.0 && level_1 === 3) {
         point.innerHTML= parseFloat(point.innerHTML) -75.0
@@ -169,7 +173,9 @@ function upgrade1() {
         level_1 = 4
         level1.innerHTML = "4"
         point.innerHTML = Math.round(point.innerHTML * 100) / 100
-        sound4.play()
+        if (!muted){
+            sound4.play()
+        }
     }
     else if (parseFloat(point.innerHTML) >=200.0 && level_1 === 4) {
         point.innerHTML= parseFloat(point.innerHTML) -200.0
@@ -181,10 +187,14 @@ function upgrade1() {
         point.innerHTML = Math.round(point.innerHTML * 100) / 100
         upgradeOne.style.background = unlocked
         upgradeOne.style.color = fontColor
-        sound4.play()
+        if (!muted){
+            sound4.play()
+        }
     }
     else {
-        sound3.play()
+        if (!muted){
+            sound3.play()
+        }
     }
 }
 
@@ -198,17 +208,24 @@ function upgrade2() {
         point.innerHTML = Math.round(point.innerHTML * 100) / 100
         upgradeTwo.style.background = unlocked
         upgradeTwo.style.color = fontColor
-        sound4.play()
+        if (!muted){
+            sound4.play()
+        }
     }
     else {
-        sound3.play()
+        if (!muted){
+            sound3.play()
+        }
+        
     }
 }
 
 function autoclick1() {
     let value = parseFloat(point.innerHTML) + automultiplier1
     point.innerHTML = Math.round(value * 100) / 100
-    sound1.play()
+    if (!muted){
+        sound1.play()
+    }
 }
 
 function upgrade3() {
@@ -220,17 +237,23 @@ function upgrade3() {
         point.innerHTML = Math.round(point.innerHTML * 100) / 100
         upgradeThree.style.background = unlocked
         upgradeThree.style.color = fontColor
-        sound4.play()
+        if (!muted){
+            sound4.play()
+        }
     }
     else {
-        sound3.play()
+        if (!muted){
+            sound3.play()
+        }
     }
 }
 
 function autoclick2() {
     let value = parseFloat(point.innerHTML) + automultiplier2
     point.innerHTML = Math.round(value * 100) / 100
-    sound2.play()
+    if (!muted){
+        sound2.play()
+    }
 }
 
 
@@ -244,7 +267,9 @@ function upgrade4() {
         level_2 = 2
         point.innerHTML= parseFloat(point.innerHTML) -150
         point.innerHTML = Math.round(point.innerHTML * 100) / 100
-        sound4.play()
+        if (!muted){
+            sound4.play()
+        }
     }
     else if (parseFloat(point.innerHTML) >=230 && level_2 === 2) {
         point.innerHTML= parseFloat(point.innerHTML) -230
@@ -254,7 +279,9 @@ function upgrade4() {
         level_2 = 3
         level2.innerHTML = "3"
         point.innerHTML = Math.round(point.innerHTML * 100) / 100
-        sound4.play()
+        if (!muted){
+            sound4.play()
+        }
     }
     else if (parseFloat(point.innerHTML) >=300 && level_2 === 3) {
         point.innerHTML= parseFloat(point.innerHTML) -300
@@ -264,7 +291,9 @@ function upgrade4() {
         level_2 = 4
         level2.innerHTML = "4"
         point.innerHTML = Math.round(point.innerHTML * 100) / 100
-        sound4.play()
+        if (!muted){
+            sound4.play()
+        }
     }
     else if (parseFloat(point.innerHTML) >=1000 && level_2 === 4) {
         point.innerHTML= parseFloat(point.innerHTML) -1000
@@ -276,10 +305,14 @@ function upgrade4() {
         point.innerHTML = Math.round(point.innerHTML * 100) / 100
         upgradeFour.style.background = unlocked
         upgradeFour.style.color = fontColor
-        sound4.play()
+        if (!muted){
+            sound4.play()
+        }
     }
     else {
-        sound3.play()
+        if (!muted){
+            sound3.play()
+        }
     }
 }
 
@@ -307,10 +340,14 @@ function upgrade5() {
         point.innerHTML = Math.round(point.innerHTML * 100) / 100
         upgradeFive.style.background = unlocked
         upgradeFive.style.color = fontColor
-        sound4.play()
+        if (!muted){
+            sound4.play()
+        }
     }
     else {
-        sound3.play()
+        if (!muted){
+            sound3.play()
+        }
     }
 }
 
@@ -318,25 +355,12 @@ function upgrade5() {
 
 function mute() {
     if (!muted) {
-        sound1.src = null
-        sound2.src = null
-        sound3.src = null
-        sound4.src = null
-        sound5.src = null
-        sound6.src = null
         muted = true
     }
     else {
-        sound1.src = "sounds/soundeffect.ogg"
-        sound2.src = "sounds/bogos.wav"
-        sound3.src = "sounds/error.mp3"
-        sound4.src = "sounds/upgrade.mp3"
-        sound5.src = "sounds/rage.wav"
-        sound6.src = "sounds/win.mp3"
         muted = false
     }
 }
-
 
 
 
@@ -352,14 +376,18 @@ function shop(skin) {
             point.innerHTML = Math.round(point.innerHTML * 100) / 100
             shop1.style.background = unlocked
             shop1.style.color = fontColor
+            if (!muted){
             sound4.play()
+        }
 
         }
         else if (paellaowned) {
          image.src = "img/paella.png";
         }
         else {
-        sound3.play()
+        if (!muted){
+            sound3.play()
+        }
     }
     }
 
@@ -372,14 +400,18 @@ function shop(skin) {
             point.innerHTML = Math.round(point.innerHTML * 100) / 100
             shop2.style.background = unlocked
             shop2.style.color = fontColor
+            if (!muted){
             sound4.play()
+        }
 
         }
         else if (bullowned) {
          image.src = "img/bull.png";
         }
         else {
-        sound3.play()
+        if (!muted){
+            sound3.play()
+        }
     }
     }    
 
@@ -392,13 +424,17 @@ function shop(skin) {
             point.innerHTML = Math.round(point.innerHTML * 100) / 100
             shop3.style.background = unlocked
             shop3.style.color = fontColor
+            if (!muted){
             sound4.play()
+        }
         }
         else if (flamowned) {
          image.src = "img/flamenco.png";
         }
         else {
-        sound3.play()
+        if (!muted){
+            sound3.play()
+        }
     }
     }  
     
@@ -411,14 +447,18 @@ function shop(skin) {
             point.innerHTML = Math.round(point.innerHTML * 100) / 100
             shop4.style.background = unlocked
             shop4.style.color = fontColor
+            if (!muted){
             sound4.play()
+        }
 
         }
         else if (mikulaowned) {
          image.src = "img/tapas.png";
         }
         else {
-        sound3.play()
+        if (!muted){
+            sound3.play()
+        }
     }
     }  
     if (skin === "churros") {
@@ -430,13 +470,17 @@ function shop(skin) {
             point.innerHTML = Math.round(point.innerHTML * 100) / 100
             shop5.style.background = unlocked
             shop5.style.color = fontColor
+            if (!muted){
             sound4.play()
+        }
         }
         else if (churrosowned) {
          image.src = "img/churros.png";
         }
         else {
-        sound3.play()
+        if (!muted){
+            sound3.play()
+        }
     }
     }  
 }
@@ -454,6 +498,8 @@ function win() {
         autoInterval = null
     }
     else {
-        sound3.play()
+        if (!muted){
+            sound3.play()
+        }
     }
 }
