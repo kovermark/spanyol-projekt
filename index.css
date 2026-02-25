@@ -155,6 +155,10 @@ footer {
 }
 
 /* ===== CAROUSEL ===== */
+.kepek{
+    height: 200px;
+}
+
 
 .carousel-image img {
     height: 700px;
