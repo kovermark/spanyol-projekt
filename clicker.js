@@ -351,15 +351,29 @@ function upgrade5() {
     }
 }
 
-
+let muteowned = false
 
 function mute() {
-    if (!muted) {
-        muted = true
+    if (!muteowned && parseFloat(point.innerHTML) >= 1000) {
+        point.innerHTML= parseFloat(point.innerHTML) -1000
+        muteowned = true
     }
     else {
+        if (!muted){
+            sound3.play()
+        }
+    }
+
+    if (!muted && muteowned) {
+            muted = true
+        }
+    else if (muted && muteowned) {
         muted = false
     }
+
+
+    
+    
 }
 
 
