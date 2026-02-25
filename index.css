@@ -42,9 +42,7 @@ body.dark-mode {
     transition: 0.3s;
 }
 
-#navMenu li:hover {
-    background-color: #856334 !important;
-}
+
 
 body.dark-mode .navbar {
     background: rgba(68, 68, 68, 0.95) !important;
@@ -64,6 +62,7 @@ body.dark-mode .navbar {
     color: white;
     transition: all 0.3s ease;
     cursor: pointer;
+    text-align: left;
 }
 
 body.dark-mode .gomb {
