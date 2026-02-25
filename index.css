@@ -131,6 +131,8 @@ body.dark-mode .bg-light {
 li {
     background-color: #ebddc3 !important;
     transition: 0.3s;
+
+
 }
 
 li:hover {
@@ -140,6 +142,8 @@ li:hover {
 body.dark-mode li {
     background-color: #4f4f4f !important;
     color: white;
+    border-color: #0e0d0d;
+
 }
 
 /* ===== FOOTER ===== */
