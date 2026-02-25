@@ -356,6 +356,7 @@ let muteowned = false
 function mute() {
     if (!muteowned && parseFloat(point.innerHTML) >= 1000) {
         point.innerHTML= parseFloat(point.innerHTML) -1000
+        point.innerHTML = Math.round(point.innerHTML * 100) / 100
         muteowned = true
     }
     else {
@@ -479,6 +480,29 @@ function shop(skin) {
         if (!churrosowned &&parseFloat(point.innerHTML) >= 1000) {
             point.innerHTML= parseFloat(point.innerHTML)- 1000
             image.src = "img/churros.png";
+            costchurros.innerHTML = "FELOLDVA"
+            churrosowned = true
+            point.innerHTML = Math.round(point.innerHTML * 100) / 100
+            shop5.style.background = unlocked
+            shop5.style.color = fontColor
+            if (!muted){
+            sound4.play()
+        }
+        }
+        else if (churrosowned) {
+         image.src = "img/churros.png";
+        }
+        else {
+        if (!muted){
+            sound3.play()
+        }
+    }
+    }  
+
+    if (skin === "barna") {
+        if (!churrosowned &&parseFloat(point.innerHTML) >= 2000) {
+            point.innerHTML= parseFloat(point.innerHTML)- 2000
+            image.src = "img/Barna.png";
             costchurros.innerHTML = "FELOLDVA"
             churrosowned = true
             point.innerHTML = Math.round(point.innerHTML * 100) / 100
