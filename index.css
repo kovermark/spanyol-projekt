@@ -192,6 +192,77 @@ footer {
 
 /* ===== CLICKER ===== */
 
+
+/* game description popup */
+
+.popupBtn {
+    background: rgba(255,255,255,0.6);
+    padding: 10px 20px ;
+    margin-bottom: 3%;
+    border-radius: 10px;
+    box-shadow: 0 5px 13px rgba(0,0,0,0.4);
+    font-weight: 600;
+    font-size: 23px;
+    transition: 0.15s;
+}
+
+.popupBtn:hover {
+    cursor: pointer;
+    transition: 0.15s;
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.6);
+}
+
+.popupBtn:active {
+    transform: scale(0.99);
+}
+
+.popupBtn p {
+    padding: none;
+    margin: none;
+}
+
+
+.popup {
+    background:#f0e7d8;
+    box-shadow: 0 5px 130px rgba(0,0,0,1);
+    width: 80vh;
+    height: 80vh;
+    border-radius: 20px;
+    padding: 20px 50px;
+    text-align: justify;
+    position: absolute;
+    z-index: 999;
+    visibility: hidden;
+    opacity: 0;
+    transform: scale(0.8);
+    transition: opacity 0.3s ease, transform 0.1s ease;
+    pointer-events: none;
+}
+
+.popup.show {
+    visibility: visible;
+    opacity: 1;
+    transform: scale(1);
+    pointer-events: auto;
+}
+
+.popup h3:hover {
+    cursor: pointer;
+    transform: scale(1.15);
+    transition: 0.1s;
+}
+
+
+body.dark-mode .popup
+ {
+    background: rgb(58, 58, 58);
+}
+body.dark-mode .popupBtn {
+    background: rgba(59, 59, 59, 0.8);
+}
+    
+
 .counter {
     font-size: 42px;
     font-weight: 700;

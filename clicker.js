@@ -541,3 +541,18 @@ function win() {
         }
     }
 }
+
+let popup = false
+let popupClass = document.querySelector(".popup")
+
+function togglePopup() {
+    if (!popup) {
+        popupClass.classList.add("show")
+        popup = true
+    }
+    else {
+        popupClass.classList.remove("show")
+        popup = false
+    }     
+}
+
