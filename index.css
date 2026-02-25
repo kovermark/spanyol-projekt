@@ -210,7 +210,7 @@ footer {
     font-size: 28px;
 }
 
-.shop, .upgrades {
+.shop, .upgrades, .win {
     background: rgba(255,255,255,0.6);
     padding: 15px;
     border-radius: 20px;
@@ -218,9 +218,14 @@ footer {
     box-shadow: 0 10px 30px rgba(0,0,0,0.2);
     transition: 0.3s;
 }
+.win{
+    max-height: 13vh;
+}
 
 body.dark-mode .shop,
-body.dark-mode .upgrades {
+body.dark-mode .upgrades,
+body.dark-mode .win
+ {
     background: rgba(59, 59, 59, 0.8);
 }
 
