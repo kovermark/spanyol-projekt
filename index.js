@@ -20,7 +20,19 @@ fetch('./tudtad.json')
 
 function toggleTheme() {
     document.body.classList.toggle("dark-mode");
+    
+    if (document.body.classList=="dark-mode")
+    {
+      document.getElementById("hatter").innerHTML ="🌙";
+    }
+    else
+    {
+      document.getElementById("hatter").innerHTML ="☀️";
+    }
+
 }
+
+
 
 document.addEventListener('DOMContentLoaded', function () {
   new bootstrap.Carousel('#carouselExample', {
