@@ -190,6 +190,34 @@ footer {
     transition: transform 1.5s ease-in-out !important;
 }
 
+
+.tudtadBtn {
+    background: linear-gradient(45deg, #e1b86b, #e3c584);
+    padding: 10px 20px ;
+    margin-bottom: 3%;
+    border-radius: 10px;
+    box-shadow: 0 5px 13px rgba(0,0,0,0.4);
+    font-weight: 600;
+    font-size: 23px;
+    transition: 0.15s;
+    width: 150px;
+    text-align: center;
+    display: block;
+    margin: auto;
+    margin-top: 15px;
+}
+
+.tudtadBtn:hover {
+    cursor: pointer;
+    transition: 0.15s;
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.6);
+}
+
+.tudtadBtn:active {
+    transform: scale(0.99);
+}
+
 /* ===== CLICKER ===== */
 
 

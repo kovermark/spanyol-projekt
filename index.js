@@ -1,5 +1,6 @@
 
-fetch('./tudtad.json')
+function tudtad() {
+  fetch('./tudtad.json')
   .then(response => response.json())
   .then(data => {
     const facts = data.facts
@@ -15,6 +16,8 @@ fetch('./tudtad.json')
     
   })
   .catch(err => console.error(err));
+}
+tudtad()
 
 
 
