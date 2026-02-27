@@ -347,7 +347,7 @@ body.dark-mode .win
     max-height: 140px;
 }
 
-#upgrade {
+.upgrade {
     background: linear-gradient(45deg, #745925, #c89b3c);
     margin: 10px 0;
     padding: 10px;
@@ -358,12 +358,12 @@ body.dark-mode .win
     font-weight: 600;
 }
 
-#upgrade:hover {
+.upgrade:hover {
     transform: scale(1.05);
     box-shadow: 0 5px 20px rgba(0,0,0,0.4);
 }
 
-body.dark-mode #upgrade {
+body.dark-mode .upgrade {
     background: linear-gradient(45deg, #3b3b3b, #4d4d4d);
     color: white;
 }
@@ -408,4 +408,27 @@ body.dark-mode #upgrade {
     content: "";
     display: table;
     clear: both;
+}
+
+
+@media (max-width: 768px) {
+  .game-main {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    justify-content: space-around !important;
+    width: 100%;
+    gap: 10px !important;
+    align-items: flex-start;
+  }
+
+  .upgrade {
+    width:100% !important;
+  }
+  .upgrades, .shop {
+    flex: 1 1 40% !important;
+    max-width: 40% !important;
+    min-width: 20px;
+    float: none !important;
+  }
 }

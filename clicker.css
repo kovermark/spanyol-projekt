@@ -79,7 +79,7 @@ body.dark-mode .game-body h2,body.dark-mode .game-body h3 {
     color: #fff8ec;
 }
 
-#upgrade, #rage {
+.upgrade, #rage {
     background-color: #2b2b2b; 
     color: #fff8ec;
     border-radius: 12px;
@@ -91,16 +91,16 @@ body.dark-mode .game-body h2,body.dark-mode .game-body h3 {
     box-shadow: 0 4px 10px rgba(0,0,0,0.15);
 }
 
-#upgrade:hover, #rage:hover {
+.upgrade:hover, #rage:hover {
     cursor: pointer;
     background-color: #0a0a0a;
 }
 
-#upgrade:active, #rage:active {
+.upgrade:active, #rage:active {
     transform: scale(0.97);
 }
 
-#upgrade p,
+.upgrade p,
 #rage p {
     margin: 0;
     padding: 0;
