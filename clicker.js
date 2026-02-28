@@ -1,5 +1,6 @@
 let point = document.querySelector(".counter")
 let cost1 = document.querySelector(".cost1")
+let cost1m = document.querySelector(".cost1m")
 let level1 = document.querySelector(".level1")
 let level2 = document.querySelector(".level2")
 let multip = document.querySelector(".multiplier")
@@ -147,6 +148,7 @@ function upgrade1() {
     if (parseFloat(point.innerHTML) >=6.7 && level_1 === 1) {
         multip.innerHTML = "1.2x"
         cost1.innerHTML = 200
+        cost1m.innerHTML = 200
         multiplier = 1.2
         level1.innerHTML = "2"
         level_1 = 2
@@ -160,6 +162,7 @@ function upgrade1() {
         point.innerHTML= parseFloat(point.innerHTML) -20.0
         multip.innerHTML = "1.8x"
         cost1.innerHTML = 750
+        cost1m.innerHTML = 750
         multiplier = 1.8
         level_1 = 3
         level1.innerHTML = "3"
@@ -172,6 +175,7 @@ function upgrade1() {
         point.innerHTML= parseFloat(point.innerHTML) -75.0
         multip.innerHTML = "3x"
         cost1.innerHTML = 2000
+        cost1m.innerHTML = 2000
         multiplier = 3
         level_1 = 4
         level1.innerHTML = "4"
@@ -184,6 +188,7 @@ function upgrade1() {
         point.innerHTML= parseFloat(point.innerHTML) -200.0
         multip.innerHTML = "5x"
         cost1.innerHTML = "-"
+        cost1m.innerHTML = "-"
         multiplier = 5
         level_1 = 5
         level1.innerHTML = "MAX"
