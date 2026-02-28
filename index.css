@@ -410,6 +410,10 @@ body.dark-mode .upgrade {
     clear: both;
 }
 
+.mobile-text {
+    display: none;
+}
+
 
 @media (max-width: 768px) {
   .game-main {
@@ -418,12 +422,14 @@ body.dark-mode .upgrade {
     flex-wrap: wrap !important;
     justify-content: space-around !important;
     width: 100%;
-    gap: 10px !important;
+    gap: 70px !important;
     align-items: flex-start;
   }
 
   .upgrade {
+    /* display: flex; */
     width:100% !important;
+    height: 70px !important;
   }
   .upgrades, .shop {
     flex: 1 1 40% !important;
@@ -431,4 +437,28 @@ body.dark-mode .upgrade {
     min-width: 20px;
     float: none !important;
   }
+
+  .upgrades .upgrade {
+    padding-top: 7px;
+  }
+
+  .column-left {
+    padding-left: 0;
+  }
+
+  .pc-text {
+    display:none;
+  }
+
+  .mobile-text {
+    display: block;
+  }
+
+  .shop .row {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap:15px;
+  }
+
 }

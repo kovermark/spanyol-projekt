@@ -5,8 +5,11 @@ let level2 = document.querySelector(".level2")
 let multip = document.querySelector(".multiplier")
 let image = document.querySelector(".clicker")
 let cost2 = document.querySelector(".cost2")
+let cost2m = document.querySelector(".cost2m")
 let cost3 = document.querySelector(".cost3")
+let cost3m = document.querySelector(".cost3m")
 let cost5 = document.querySelector(".cost5")
+let cost5m = document.querySelector(".cost5m")
 let costwin = document.querySelector(".costwin")
 let rageInfo = document.querySelector(".rageInfo")
 let upgradeOne = document.querySelector(".upgrade1")
@@ -62,11 +65,11 @@ let bullowned = false
 let flamowned = false
 let mikulaowned = false
 let churrosowned = false
-let costpaella = document.querySelector(".costpaella")
-let costbull = document.querySelector(".costbull")
-let costflam = document.querySelector(".costflam")
-let costmikula = document.querySelector(".costmikula")
-let costchurros = document.querySelector(".costchurros")
+let costpaella = document.querySelectorAll(".costpaella")
+let costbull = document.querySelectorAll(".costbull")
+let costflam = document.querySelectorAll(".costflam")
+let costmikula = document.querySelectorAll(".costmikula")
+let costchurros = document.querySelectorAll(".costchurros")
 
 let level_2 = 1
 let chance = document.querySelector(".chance")
@@ -204,6 +207,7 @@ function upgrade2() {
         point.innerHTML= parseFloat(point.innerHTML)- 100
         automultiplier1 = 15
         cost2.innerHTML = "- FELOLDVA"
+        cost2m.innerHTML = "FELOLDVA"
         autoInterval = setInterval(autoclick1, 1000)
         point.innerHTML = Math.round(point.innerHTML * 100) / 100
         upgradeTwo.style.background = unlocked
@@ -233,6 +237,7 @@ function upgrade3() {
         point.innerHTML= parseFloat(point.innerHTML)- 100
         automultiplier2 = 250
         cost3.innerHTML = "- FELOLDVA"
+        cost3m.innerHTML = "FELOLDVA"
         autoInterval = setInterval(autoclick2, 5000)
         point.innerHTML = Math.round(point.innerHTML * 100) / 100
         upgradeThree.style.background = unlocked
@@ -256,14 +261,17 @@ function autoclick2() {
     }
 }
 
-
+let cost4m = document.querySelector(".cost4m")
+let level4m = document.querySelector(".level4m")
 
 function upgrade4() {
     if (parseFloat(point.innerHTML) >=150 && level_2 === 1) {
         chance.innerHTML = "20%"
         critchance = 0.2
-        cost4.innerHTML = 23000
-        level2.innerHTML = "2"
+        cost4.innerHTML= 23000
+        cost4m.innerHTML= 23000
+        level2.innerHTML= "2"
+        level4m.innerHTML= "2"
         level_2 = 2
         point.innerHTML= parseFloat(point.innerHTML) -150
         point.innerHTML = Math.round(point.innerHTML * 100) / 100
@@ -275,9 +283,11 @@ function upgrade4() {
         point.innerHTML= parseFloat(point.innerHTML) -230
         chance.innerHTML = "33%"
         critchance = 0.33
-        cost4.innerHTML = 30000
+        cost4.innerHTML= 30000
+        cost4m.innerHTML= 30000
         level_2 = 3
-        level2.innerHTML = "3"
+        level2.innerHTML= "3"
+        level4m.innerHTML= "3"
         point.innerHTML = Math.round(point.innerHTML * 100) / 100
         if (!muted){
             sound4.play()
@@ -287,9 +297,11 @@ function upgrade4() {
         point.innerHTML= parseFloat(point.innerHTML) -300
         chance.innerHTML = "50%"
         critchance = 0.5
-        cost4.innerHTML = 50000
+        cost4.innerHTML= 50000
+        cost4m.innerHTML=50000
         level_2 = 4
-        level2.innerHTML = "4"
+        level2.innerHTML= "4"
+        level4m.innerHTML= "4"
         point.innerHTML = Math.round(point.innerHTML * 100) / 100
         if (!muted){
             sound4.play()
@@ -300,8 +312,10 @@ function upgrade4() {
         chance.innerHTML = "100%"
         critchance = 1
         cost4.innerHTML = "-"
+        cost4m.innerHTML= "-"
         level_2 = 5
-        level2.innerHTML = "MAX"
+        level2.innerHTML= "MAX"
+        level4m.innerHTML= "MAX"
         point.innerHTML = Math.round(point.innerHTML * 100) / 100
         upgradeFour.style.background = unlocked
         upgradeFour.style.color = fontColor
@@ -333,11 +347,14 @@ function critstrike () {
 
 function upgrade5() {
     if (!rageUnlocked && parseFloat(point.innerHTML) >= 750){
-        point.innerHTML= parseFloat(point.innerHTML) -750
+        let currentPoints = parseFloat(point.innerHTML); // számként
+        currentPoints -= 750;                             // levonás
+        currentPoints = Math.round(currentPoints * 100) / 100; // kerekítés
+
+        point.innerHTML = currentPoints;  
         rageUnlocked = true
         rageInfo.innerHTML = "KÉSZ"
-        cost5.innerHTML = "- FELOLDVA"
-        point.innerHTML = Math.round(point.innerHTML * 100) / 100
+        cost5m.innerHTML = "FELOLDVA"
         upgradeFive.style.background = unlocked
         upgradeFive.style.color = fontColor
         if (!muted){
@@ -352,14 +369,19 @@ function upgrade5() {
 }
 
 let muteowned = false
+let asd = document.querySelector(".asd")
+let upgrade6 = document.querySelector(".upgrade6")
+let classmute = document.querySelector(".mute")
 
 function mute() {
     if (!muteowned && parseFloat(point.innerHTML) >= 1000) {
         point.innerHTML= parseFloat(point.innerHTML) -1000
         point.innerHTML = Math.round(point.innerHTML * 100) / 100
         muteowned = true
+        upgrade6.style.background = unlocked
+        upgrade6.style.color = fontColor
     }
-    else {
+    else if (!muteowned){
         if (!muted){
             sound3.play()
         }
@@ -367,9 +389,11 @@ function mute() {
 
     if (!muted && muteowned) {
             muted = true
+            asd.innerHTML = "NÉMÍTVA"
         }
     else if (muted && muteowned) {
         muted = false
+        asd.innerHTML = "HANGOS"
     }
 
 
@@ -378,7 +402,12 @@ function mute() {
 }
 
 
-
+let shopi1 = document.getElementById("shopi1")
+let shopi2 = document.getElementById("shopi2")
+let shopi3 = document.getElementById("shopi3")
+let shopi4 = document.getElementById("shopi4")
+let shopi5 = document.getElementById("shopi5")
+let shopi6 = document.getElementById("shopi6")
 
 
 function shop(skin) {
@@ -393,6 +422,7 @@ function shop(skin) {
             shop1.style.color = fontColor
             if (!muted){
             sound4.play()
+            shopi1.innerHTML = "FELOLDVA"
         }
 
         }
@@ -417,6 +447,7 @@ function shop(skin) {
             shop2.style.color = fontColor
             if (!muted){
             sound4.play()
+            shopi2.innerHTML = "FELOLDVA"
         }
 
         }
@@ -441,6 +472,7 @@ function shop(skin) {
             shop3.style.color = fontColor
             if (!muted){
             sound4.play()
+            shopi3.innerHTML = "FELOLDVA"
         }
         }
         else if (flamowned) {
@@ -464,6 +496,7 @@ function shop(skin) {
             shop4.style.color = fontColor
             if (!muted){
             sound4.play()
+            shopi4.innerHTML = "FELOLDVA"
         }
 
         }
@@ -487,6 +520,7 @@ function shop(skin) {
             shop5.style.color = fontColor
             if (!muted){
             sound4.play()
+            shopi5.innerHTML = "FELOLDVA"
         }
         }
         else if (churrosowned) {
@@ -510,6 +544,7 @@ function shop(skin) {
             shop5.style.color = fontColor
             if (!muted){
             sound4.play()
+            shopi6.innerHTML = "FELOLDVA"
         }
         }
         else if (churrosowned) {

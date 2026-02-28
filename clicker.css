@@ -38,7 +38,7 @@ body.dark-mode .game-body {
 .column-right {
     float: left;
     width: 70%;
-    height: 6vh;
+    height: auto;
 }
 
 .clickerbox {
