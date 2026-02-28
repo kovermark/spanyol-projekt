@@ -347,9 +347,9 @@ function critstrike () {
 
 function upgrade5() {
     if (!rageUnlocked && parseFloat(point.innerHTML) >= 750){
-        let currentPoints = parseFloat(point.innerHTML); // számként
-        currentPoints -= 750;                             // levonás
-        currentPoints = Math.round(currentPoints * 100) / 100; // kerekítés
+        let currentPoints = parseFloat(point.innerHTML);
+        currentPoints -= 750;
+        currentPoints = Math.round(currentPoints * 100) / 100;
 
         point.innerHTML = currentPoints;  
         rageUnlocked = true
