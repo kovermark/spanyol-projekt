@@ -468,5 +468,7 @@ body.dark-mode .upgrade {
     align-items: center;
     gap:15px;
   }
-
+  .szint{
+    display: none;
+  }
 }
