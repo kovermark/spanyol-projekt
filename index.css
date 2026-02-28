@@ -422,7 +422,7 @@ body.dark-mode .upgrade {
     flex-wrap: wrap !important;
     justify-content: space-around !important;
     width: 100%;
-    gap: 70px !important;
+    gap: 30px !important;
     align-items: flex-start;
   }
 
@@ -438,8 +438,16 @@ body.dark-mode .upgrade {
     float: none !important;
   }
 
+  .shop img {
+    width: 40px;
+  }
+
+  .upgrades p, .shop p {
+    font-size: 13px;
+  }
+
   .upgrades .upgrade {
-    padding-top: 7px;
+    padding-top: 5px;
   }
 
   .column-left {
