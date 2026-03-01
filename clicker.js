@@ -66,11 +66,11 @@ let bullowned = false
 let flamowned = false
 let mikulaowned = false
 let churrosowned = false
-let costpaella = document.querySelectorAll(".costpaella")
-let costbull = document.querySelectorAll(".costbull")
-let costflam = document.querySelectorAll(".costflam")
-let costmikula = document.querySelectorAll(".costmikula")
-let costchurros = document.querySelectorAll(".costchurros")
+let costpaella = document.querySelector(".costpaella")
+let costbull = document.querySelector(".costbull")
+let costflam = document.querySelector(".costflam")
+let costmikula = document.querySelector(".costmikula")
+let costchurros = document.querySelector(".costchurros")
 
 let level_2 = 1
 let chance = document.querySelector(".chance")
@@ -267,7 +267,6 @@ function autoclick2() {
 }
 
 let cost4m = document.querySelector(".cost4m")
-let level4m = document.querySelector(".level4m")
 
 function upgrade4() {
     if (parseFloat(point.innerHTML) >=150 && level_2 === 1) {
@@ -276,7 +275,6 @@ function upgrade4() {
         cost4.innerHTML= 23000
         cost4m.innerHTML= 23000
         level2.innerHTML= "2"
-        level4m.innerHTML= "2"
         level_2 = 2
         point.innerHTML= parseFloat(point.innerHTML) -150
         point.innerHTML = Math.round(point.innerHTML * 100) / 100
@@ -292,7 +290,6 @@ function upgrade4() {
         cost4m.innerHTML= 30000
         level_2 = 3
         level2.innerHTML= "3"
-        level4m.innerHTML= "3"
         point.innerHTML = Math.round(point.innerHTML * 100) / 100
         if (!muted){
             sound4.play()
@@ -306,7 +303,6 @@ function upgrade4() {
         cost4m.innerHTML=50000
         level_2 = 4
         level2.innerHTML= "4"
-        level4m.innerHTML= "4"
         point.innerHTML = Math.round(point.innerHTML * 100) / 100
         if (!muted){
             sound4.play()
@@ -320,7 +316,6 @@ function upgrade4() {
         cost4m.innerHTML= "-"
         level_2 = 5
         level2.innerHTML= "MAX"
-        level4m.innerHTML= "MAX"
         point.innerHTML = Math.round(point.innerHTML * 100) / 100
         upgradeFour.style.background = unlocked
         upgradeFour.style.color = fontColor
