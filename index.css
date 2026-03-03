@@ -24,6 +24,12 @@ body.dark-mode {
     transition: 0.3s;
 }
 
+.anchor-offset {
+  position: relative;
+  padding-top: 80px;
+}
+
+
 .navbar-brand {
     font-family: 'Bebas Neue', sans-serif;
     font-size: 32px;
