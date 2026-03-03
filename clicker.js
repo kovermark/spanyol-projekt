@@ -23,6 +23,7 @@ let shop2 = document.querySelector(".shop2")
 let shop3 = document.querySelector(".shop3")
 let shop4 = document.querySelector(".shop4")
 let shop5 = document.querySelector(".shop5")
+let shop6 = document.querySelector(".shop6")
 let winfirst = document.querySelector(".winfirst")
 let winsecond = document.querySelector(".winsecond")
 let autoInterval = null
@@ -66,11 +67,13 @@ let bullowned = false
 let flamowned = false
 let mikulaowned = false
 let churrosowned = false
+let sombreroowned = false
 let costpaella = document.querySelector(".costpaella")
 let costbull = document.querySelector(".costbull")
 let costflam = document.querySelector(".costflam")
 let costmikula = document.querySelector(".costmikula")
 let costchurros = document.querySelector(".costchurros")
+let costsombrero = document.querySelector(".costsombrero")
 
 let level_2 = 1
 let chance = document.querySelector(".chance")
@@ -533,22 +536,22 @@ function shop(skin) {
     }
     }  
 
-    if (skin === "barna") {
-        if (!churrosowned &&parseFloat(point.innerHTML) >= 2000) {
+    if (skin === "sombrero") {
+        if (!sombreroowned &&parseFloat(point.innerHTML) >= 2000) {
             point.innerHTML= parseFloat(point.innerHTML)- 2000
-            image.src = "img/Barna.png";
-            costchurros.innerHTML = "FELOLDVA"
-            churrosowned = true
+            image.src = "img/sombrero.png";
+            costsombrero.innerHTML = "FELOLDVA"
+            sombreroowned = true
             point.innerHTML = Math.round(point.innerHTML * 100) / 100
-            shop5.style.background = unlocked
-            shop5.style.color = fontColor
+            shop6.style.background = unlocked
+            shop6.style.color = fontColor
             if (!muted){
             sound4.play()
             shopi6.innerHTML = "FELOLDVA"
         }
         }
         else if (churrosowned) {
-         image.src = "img/churros.png";
+         image.src = "img/sombrero.png";
         }
         else {
         if (!muted){
