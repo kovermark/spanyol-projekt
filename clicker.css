@@ -97,7 +97,7 @@ body.dark-mode .game-body h2,body.dark-mode .game-body h3  {
     background-color: #0a0a0a;
 }
 
-.upgrade:active, #rage:active {
+.upgrade:active, #rage:active, .win:active {
     transform: scale(0.97);
 }
 

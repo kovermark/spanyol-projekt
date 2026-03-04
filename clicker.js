@@ -150,8 +150,8 @@ function displayPoints(){
 function upgrade1() {
     if (parseFloat(point.innerHTML) >=6.7 && level_1 === 1) {
         multip.innerHTML = "1.2x"
-        cost1.innerHTML = 200
-        cost1m.innerHTML = 200
+        cost1.innerHTML = "20p"
+        cost1m.innerHTML = "20p"
         multiplier = 1.2
         level1.innerHTML = "2"
         level_1 = 2
@@ -164,8 +164,8 @@ function upgrade1() {
     else if (parseFloat(point.innerHTML) >=20.0 && level_1 === 2) {
         point.innerHTML= parseFloat(point.innerHTML) -20.0
         multip.innerHTML = "1.8x"
-        cost1.innerHTML = 750
-        cost1m.innerHTML = 750
+        cost1.innerHTML = "75p"
+        cost1m.innerHTML = "75p"
         multiplier = 1.8
         level_1 = 3
         level1.innerHTML = "3"
@@ -177,8 +177,8 @@ function upgrade1() {
     else if (parseFloat(point.innerHTML) >=75.0 && level_1 === 3) {
         point.innerHTML= parseFloat(point.innerHTML) -75.0
         multip.innerHTML = "3x"
-        cost1.innerHTML = 2000
-        cost1m.innerHTML = 2000
+        cost1.innerHTML = "200p"
+        cost1m.innerHTML = "200p"
         multiplier = 3
         level_1 = 4
         level1.innerHTML = "4"
@@ -191,7 +191,7 @@ function upgrade1() {
         point.innerHTML= parseFloat(point.innerHTML) -200.0
         multip.innerHTML = "5x"
         cost1.innerHTML = "-"
-        cost1m.innerHTML = "-"
+        cost1m.innerHTML = "- MAX"
         multiplier = 5
         level_1 = 5
         level1.innerHTML = "MAX"
@@ -241,8 +241,8 @@ function autoclick1() {
 }
 
 function upgrade3() {
-    if (parseFloat(point.innerHTML) >= 200 && automultiplier2 === 0) {
-        point.innerHTML= parseFloat(point.innerHTML)- 100
+    if (parseFloat(point.innerHTML) >= 400 && automultiplier2 === 0) {
+        point.innerHTML= parseFloat(point.innerHTML)- 400
         automultiplier2 = 250
         cost3.innerHTML = "- FELOLDVA"
         cost3m.innerHTML = "FELOLDVA"
@@ -275,8 +275,8 @@ function upgrade4() {
     if (parseFloat(point.innerHTML) >=150 && level_2 === 1) {
         chance.innerHTML = "20%"
         critchance = 0.2
-        cost4.innerHTML= 23000
-        cost4m.innerHTML= 23000
+        cost4.innerHTML= "230p"
+        cost4m.innerHTML= "230p"
         level2.innerHTML= "2"
         level_2 = 2
         point.innerHTML= parseFloat(point.innerHTML) -150
@@ -289,8 +289,8 @@ function upgrade4() {
         point.innerHTML= parseFloat(point.innerHTML) -230
         chance.innerHTML = "33%"
         critchance = 0.33
-        cost4.innerHTML= 30000
-        cost4m.innerHTML= 30000
+        cost4.innerHTML= "300p"
+        cost4m.innerHTML= "300p"
         level_2 = 3
         level2.innerHTML= "3"
         point.innerHTML = Math.round(point.innerHTML * 100) / 100
@@ -302,8 +302,8 @@ function upgrade4() {
         point.innerHTML= parseFloat(point.innerHTML) -300
         chance.innerHTML = "50%"
         critchance = 0.5
-        cost4.innerHTML= 50000
-        cost4m.innerHTML=50000
+        cost4.innerHTML= "1000p"
+        cost4m.innerHTML="1000p"
         level_2 = 4
         level2.innerHTML= "4"
         point.innerHTML = Math.round(point.innerHTML * 100) / 100
@@ -357,6 +357,7 @@ function upgrade5() {
         point.innerHTML = currentPoints;  
         rageUnlocked = true
         rageInfo.innerHTML = "KÉSZ"
+        cost5.innerHTML = "- FELOLDVA"
         cost5m.innerHTML = "FELOLDVA"
         upgradeFive.style.background = unlocked
         upgradeFive.style.color = fontColor
