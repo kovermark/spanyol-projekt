@@ -167,7 +167,11 @@ li {
 
 .fact1, .fact2, .fact3{
     margin: 2px;
+    padding: 5px 15px ;
+}
 
+.fact {
+    margin: 2px;
 }
 
 li:hover {
