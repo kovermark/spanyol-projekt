@@ -570,8 +570,7 @@ function win() {
         sound6.play()
         winfirst.innerHTML = "MEGNYERTED A JÁTÉKOT!"
         winsecond.innerHTML = "GRATULÁLUNK!"
-        clearInterval(autoInterval)
-        autoInterval = null
+        muted = true
     }
     else {
         if (!muted){
