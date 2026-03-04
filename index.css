@@ -163,7 +163,10 @@ body.dark-mode .bg-light {
 li {
     background-color: #ebddc3 !important;
     transition: 0.3s;
+}
 
+.fact1, .fact2, .fact3{
+    margin: 2px;
 
 }
 
