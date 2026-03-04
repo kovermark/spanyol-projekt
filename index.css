@@ -191,7 +191,7 @@ footer {
 
 /* ===== CAROUSEL ===== */
 .kepek{
-    height: 200px;
+    max-height: 200px;
 }
 
 
@@ -260,16 +260,6 @@ body.dark-mode .tudtadBtn {
 h5 {
     text-align: center;
     font-weight: 600;
-}
-
-
-.fact1, .fact2, .fact3 {
-    padding-left: 15px;
-    margin: 3px;
-}
-
-.fact {
-    margin: 2px;
 }
 
 /* ===== CLICKER ===== */
@@ -525,4 +515,5 @@ body.dark-mode .upgrade {
   .szint{
     display: none;
   }
+
 }
