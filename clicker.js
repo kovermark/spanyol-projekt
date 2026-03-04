@@ -211,7 +211,7 @@ function upgrade1() {
 
 
 function upgrade2() {
-    if (parseFloat(point.innerHTML) >= 100 && level_1 === 5 && automultiplier1 === 0) {
+    if (parseFloat(point.innerHTML) >= 100 && automultiplier1 === 0) {
         point.innerHTML= parseFloat(point.innerHTML)- 100
         automultiplier1 = 15
         cost2.innerHTML = "- FELOLDVA"
@@ -241,7 +241,7 @@ function autoclick1() {
 }
 
 function upgrade3() {
-    if (parseFloat(point.innerHTML) >= 200 && level_1 === 5 && automultiplier2 === 0) {
+    if (parseFloat(point.innerHTML) >= 200 && automultiplier2 === 0) {
         point.innerHTML= parseFloat(point.innerHTML)- 100
         automultiplier2 = 250
         cost3.innerHTML = "- FELOLDVA"

@@ -69,17 +69,18 @@ body.dark-mode .game-body {
     color: #000000;
 }
 
-body.dark-mode .game-body h2,body.dark-mode .game-body h3 {
+body.dark-mode .game-body h2,body.dark-mode .game-body h3  {
     text-align: center;
     font-weight: 700;
     color: #ffffff;
 }
 
-#rage h3 {
+
+#rage h3, .win h3 {
     color: #fff8ec;
 }
 
-.upgrade, #rage {
+.upgrade, #rage, .win {
     background-color: #2b2b2b; 
     color: #fff8ec;
     border-radius: 12px;
@@ -101,7 +102,7 @@ body.dark-mode .game-body h2,body.dark-mode .game-body h3 {
 }
 
 .upgrade p,
-#rage p {
+#rage p, .win p {
     margin: 0;
     padding: 0;
     text-align: center;

@@ -389,8 +389,7 @@ body.dark-mode .popupBtn {
 
 
 body.dark-mode .shop,
-body.dark-mode .upgrades,
-body.dark-mode .win
+body.dark-mode .upgrades
  {
     background: rgba(59, 59, 59, 0.8);
 }
@@ -417,7 +416,7 @@ body.dark-mode .win
     box-shadow: 0 5px 20px rgba(0,0,0,0.4);
 }
 
-body.dark-mode .upgrade {
+body.dark-mode .upgrade{
     background: linear-gradient(45deg, #3b3b3b, #4d4d4d);
     color: white;
 }
@@ -466,6 +465,23 @@ body.dark-mode .upgrade {
 
 .mobile-text {
     display: none;
+}
+
+.win {
+    background: linear-gradient(135deg, #1b5e20, #2e7d32, #68bd6d);
+    padding: 10px;
+    border-radius: 15px;
+    margin-top: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+    color: white;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+
+.win:hover {
+    box-shadow: 0 0 20px green;
 }
 
 
