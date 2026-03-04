@@ -550,7 +550,7 @@ function shop(skin) {
             shopi6.innerHTML = "FELOLDVA"
         }
         }
-        else if (churrosowned) {
+        else if (sombreroowned) {
          image.src = "img/sombrero.png";
         }
         else {
