@@ -24,6 +24,24 @@ body.dark-mode {
     transition: 0.3s;
 }
 
+.modal-dialog{
+    max-width: 50vw;
+}
+
+.modal-kep{
+    max-width: 100%;
+}
+.modal-header{
+    background: #ffffff;
+}
+
+.modal-body{
+    background: #ffffff;
+}
+
+body.dark-mode .modal-header, body.dark-mode .modal-body {
+    background-color: #272727 !important;
+}
 .anchor-offset {
   position: relative;
   padding-top: 40px;
