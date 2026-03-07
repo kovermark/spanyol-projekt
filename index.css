@@ -25,20 +25,38 @@ body.dark-mode {
 }
 
 .modal-dialog{
-    max-width: 50vw;
-    margin-top:200px;
+    max-width: 700px;
+    margin-top: 80px;
 }
 
-.modal-kep{
-    max-width: 100%;
+.modal-content{
+    border-radius: 15px;
 }
+
 .modal-header{
-    background: #ffffff;
+    border-bottom: none;
+    padding: 20px 25px;
 }
 
 .modal-body{
-    background: #ffffff;
+    padding: 25px;
 }
+
+.modal-kep{
+    width: 100%;
+    border-radius: 10px;
+}
+
+.modal-body p{
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.modal-content{
+    border-radius: 15px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+}
+
 
 body.dark-mode .modal-header, body.dark-mode .modal-body {
     background-color: #272727 !important;
@@ -135,6 +153,7 @@ h3 { font-size: 24px; }
 .card:hover {
     transform: translateY(-10px);
     box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+    cursor: pointer;
 }
 
 body.dark-mode .card {
@@ -494,9 +513,25 @@ body.dark-mode .upgrade{
     gap: 30px !important;
     align-items: flex-start;
   }
+  .upgrades .upgrade {
+        display: flex;
+        flex-direction: column; 
+        justify-content: center; 
+        height: 80px; 
+    }
+
+  .upgrades .mobile-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+    }
+
+  .upgrades .pc-text {
+        display: none; 
+    }
 
   .upgrade {
-    /* display: flex; */
     width:100% !important;
     height: 70px !important;
   }
@@ -540,5 +575,5 @@ body.dark-mode .upgrade{
   .szint{
     display: none;
   }
-
+  
 }
