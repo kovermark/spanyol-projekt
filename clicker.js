@@ -490,8 +490,8 @@ function shop(skin) {
     }  
     
     if (skin === "mikula") {
-        if (!mikulaowned &&parseFloat(point.innerHTML) >= 1000) {
-            point.innerHTML= parseFloat(point.innerHTML)- 1000
+        if (!mikulaowned &&parseFloat(point.innerHTML) >= 1500) {
+            point.innerHTML= parseFloat(point.innerHTML)- 1500
             image.src = "img/tapas.png";
             costmikula.innerHTML = "FELOLDVA"
             mikulaowned = true
@@ -514,8 +514,8 @@ function shop(skin) {
     }
     }  
     if (skin === "churros") {
-        if (!churrosowned &&parseFloat(point.innerHTML) >= 1000) {
-            point.innerHTML= parseFloat(point.innerHTML)- 1000
+        if (!churrosowned &&parseFloat(point.innerHTML) >= 2000) {
+            point.innerHTML= parseFloat(point.innerHTML)- 2000
             image.src = "img/churros.png";
             costchurros.innerHTML = "FELOLDVA"
             churrosowned = true
