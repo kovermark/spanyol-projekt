@@ -538,8 +538,8 @@ function shop(skin) {
     }  
 
     if (skin === "sombrero") {
-        if (!sombreroowned &&parseFloat(point.innerHTML) >= 2000) {
-            point.innerHTML= parseFloat(point.innerHTML)- 2000
+        if (!sombreroowned &&parseFloat(point.innerHTML) >= 20000) {
+            point.innerHTML= parseFloat(point.innerHTML)- 20000
             image.src = "img/sombrero.png";
             costsombrero.innerHTML = "FELOLDVA"
             sombreroowned = true
