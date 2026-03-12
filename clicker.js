@@ -565,7 +565,7 @@ function shop(skin) {
 
 
 function win() {
-    if (parseFloat(point.innerHTML) >=1000 && !won) {
+    if (parseFloat(point.innerHTML) >=30000 && !won) {
         image.src = "img/goldmedal.png"
         won = true
         sound6.play()
